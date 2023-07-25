@@ -28,7 +28,7 @@ jobs:
       with:
         ref: ${{ github.event.client_payload.sha }}
     - name: Create zip archive
-        run: zip -r veracode.zip ./bin -x .git/**\* node_modules/**\* dist/**\* test/**\*    
+      run: zip -r veracode.zip ./bin -x .git/**\* node_modules/**\* dist/**\* test/**\*    
     - uses: actions/upload-artifact@v3
       with:
         name: veracode-artifact
